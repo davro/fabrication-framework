@@ -1,11 +1,21 @@
 Fabrication Framework
 =====================
 
-Framework based around the fabrication template engine.
+The Fabrication Framework implements an MVC pattern .
+
+The central component, the model, A view can be any output representation of information, such as a chart or a diagram. Multiple views of the same information are possible, such as a bar chart for management and a tabular view for accountants. The third part, the controller, accepts input and converts it to commands for the model or view.[
+
+Model, built in Object Relation Manager.
+View, DOM based fabrication template engine.
+Controller, managed by the fabrication framework, unless overridden.
 
 
-MVC DOM based framework based on the Fabrication Engine.
+--Workspace 
+The workspace contain the users projects.
 
+--Projects
+
+Workspace Example 
 
 ) Creating a project.
 $ workspace create project ProjectName
