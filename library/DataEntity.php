@@ -14,15 +14,12 @@ use Library\Data;
 
 /**
  * Data entity
- * 
- * Object, event, about which data is stored.
  *
  * @package		Library
  * @subpackage	DataEntity
  * @author		David Stevens <mail.davro@gmail.com>
  * 
  */
-//class DataEntity implements \ArrayAccess, \Countable {
 class DataEntity extends Data implements \ArrayAccess {
 	
 	public static $name;
@@ -104,45 +101,6 @@ class DataEntity extends Data implements \ArrayAccess {
 		
 	} // end function getNamespace
 	
-	
-//	/**
-//	 * Path to the database used to stored data model related objects.
-//	 * 
-//	 * @return	string
-//	 */
-//	public static function path() {
-//		
-//		return self::pathDatabase();
-//		
-//	} // end function path
-//
-//	/**
-//	 * Path to the system temporary directory where the database will be stored
-//	 * as this 
-//	 * 
-//	 * @return string
-//	 */
-//	public static function pathTmp() {
-//		
-//		return '/tmp/';
-//		
-//	} // end function pathTmp
-//	
-//	/**
-//	 * Path to the database that is located in the system temp
-//	 * 
-//	 * @return string
-//	 */
-//	public static function pathDatabase() {
-//		
-//		return self::pathTmp() . 'fabrication.' . PROJECT_HOSTNAME . '.sqlite';
-//		
-//	} // end function pathDatabase
-	
-	
-	
-	
-	
 	/**
 	 * ArrayAccess interface 
 	 * 
@@ -180,16 +138,5 @@ class DataEntity extends Data implements \ArrayAccess {
 		unset($this[$offset]);
 		
 	} // end function offsetUnset
-	
-//	/**
-//	 * Countable interface
-//	 * 
-//	 * @return type
-//	 */
-//	public function count() {
-//		
-//		return count($this);
-//		
-//	} // end function count
 	
 } // end class DataEntity
