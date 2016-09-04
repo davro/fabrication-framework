@@ -12,3 +12,8 @@ Controller, managed by the fabrication framework, unless overridden.
 		
 
 
+=====================
+Composer based 
+
+php composer.phar install
+php composer.phar update

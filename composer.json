@@ -1,0 +1,14 @@
+{
+    "config": {
+        "vendor-dir": "library/vendor"
+    },
+    "autoload": {
+        "classmap": ["library/vendor/"]
+    },
+    "require": {
+        "components/bootstrap": "3.2.0",
+        "components/jqueryui": "1.11.2",
+	"davro/fabrication": "dev-master",
+        "twbs/bootstrap": "3.3.2"
+    }
+}
