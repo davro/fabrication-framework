@@ -1,19 +1,20 @@
 Fabrication Framework
 =====================
 
-The Fabrication Framework implements an MVC pattern .
+The Fabrication Framework implements an MVC pattern.
 
 
-Model, built in Object Relation Manager.
+Model, Built in Object Relation Manager.
 
-View, DOM based fabrication template engine.
+View, [Fabrication](https://github.com/davro/fabrication) template engine DOM based.
 
-Controller, managed by the fabrication framework, unless overridden.
+Controller, Namespace routing by the fabrication framework.
 		
 
 
 =====================
-Composer based 
+Composer based installation
 
 php composer.phar install
+
 php composer.phar update
