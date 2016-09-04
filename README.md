@@ -13,7 +13,7 @@ Controller, Namespace routing by the fabrication framework.
 
 
 =====================
-Composer based installation
+__Composer based installation__
 
 php composer.phar install
 
