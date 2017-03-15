@@ -9,12 +9,18 @@ Model, Built in Object Relation Manager.
 View, [Fabrication](https://github.com/davro/fabrication) template engine DOM based.
 
 Controller, Namespace routing by the fabrication framework.
-		
+	
+## Features
 
-
-=====================
+## Installation
 __Composer based installation__
 
 php composer.phar install
 
 php composer.phar update
+
+## Documentation
+
+### Example Website (standalone)
+
+TODO
