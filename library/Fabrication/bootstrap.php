@@ -49,12 +49,10 @@ if (! defined('FRAMEWORK_DISPATCHER')) {
 }
 define('FRAMEWORK_ENVIRONMENT', WORKSPACE_ENVIRONMENT);
 
-// Bootstrap setings.
+// Bootstrap and Remote settings.
 define('FRAMEWORK_BOOTSTRAP', 1);
 define('FRAMEWORK_BOOTSTRAP_DEBUG', 0);
 define('FRAMEWORK_BOOTSTRAP_DEBUG_EXIT', 1);
-
-// Remote settings.
 define('FRAMEWORK_REMOTE', 1);
 define('FRAMEWORK_REMOTE_DEBUG', 1);
 define('FRAMEWORK_REMOTE_DEBUG_ALLOW', '127.0.0.1');
