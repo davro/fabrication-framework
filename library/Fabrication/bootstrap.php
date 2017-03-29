@@ -9,9 +9,9 @@ namespace Fabrication;
  *
  * @author  David Stevens <mail.davro@gmail.com>
  */
-define('WORKSPACE', 1);             // Workspace (framework application)
-define('WORKSPACE_REMOTE', 1);      // Workspace (login/registration system)
-define('WORKSPACE_ADMIN', 'root')  ; // Workspace (unix username)
+define('WORKSPACE', 1);              // Workspace (framework application)
+define('WORKSPACE_REMOTE', 1);       // Workspace (login/registration system)
+define('WORKSPACE_ADMIN', 'root')  ;
 
 if (php_sapi_name() != 'cli' && isset($_SERVER['HTTP_HOST'])) {
     if ($_SERVER['HTTP_HOST'] == PROJECT_DOMAIN || $_SERVER['HTTP_HOST'] == 'www.'.PROJECT_DOMAIN) {
