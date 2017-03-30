@@ -21,6 +21,7 @@ php composer.phar update
 
 ## Documentation
 
-### Example Website (standalone)
+### Example Websites (standalone)
 
-TODO
+[www.davro.net](http://www.davro.net/)
+[www.daxro.co.uk](http://www.daxro.co.uk/)
