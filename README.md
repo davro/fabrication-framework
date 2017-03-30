@@ -23,5 +23,6 @@ php composer.phar update
 
 ### Example Websites (standalone)
 
-[www.davro.net](http://www.davro.net/)
-[www.daxro.co.uk](http://www.daxro.co.uk/)
+[www.davro.net](http://www.davro.net/) Blog (Digital Playground)
+
+[www.daxro.co.uk](http://www.daxro.co.uk/) Daxro Motors
