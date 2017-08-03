@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b42cd6b9424c611e436f5867e4b95e5c",
-    "content-hash": "4893e3f42eefdb8855eceb2589bbc5e9",
+    "hash": "ae88892cf682ff736c4b1fe157100157",
+    "content-hash": "4248ca589c20f2fa6065576ea11b6ac5",
     "packages": [
         {
             "name": "components/bootstrap",
@@ -65,17 +65,70 @@
             "time": "2014-09-03 07:11:25"
         },
         {
-            "name": "components/jquery",
-            "version": "3.1.0",
+            "name": "components/bootstrap-default",
+            "version": "3.3.5",
             "source": {
                 "type": "git",
-                "url": "https://github.com/components/jquery.git",
-                "reference": "39192bee49ceb98f36e9592ee2fc5116a414b6cc"
+                "url": "https://github.com/components/bootstrap-default.git",
+                "reference": "db8137e7656e7887be92a6f54a866ed975b5946e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/components/jquery/zipball/39192bee49ceb98f36e9592ee2fc5116a414b6cc",
-                "reference": "39192bee49ceb98f36e9592ee2fc5116a414b6cc",
+                "url": "https://api.github.com/repos/components/bootstrap-default/zipball/db8137e7656e7887be92a6f54a866ed975b5946e",
+                "reference": "db8137e7656e7887be92a6f54a866ed975b5946e",
+                "shasum": ""
+            },
+            "require": {
+                "components/bootstrap": "*"
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "styles": [
+                        "css/bootstrap.css",
+                        "css/bootstrap-theme.css"
+                    ],
+                    "files": [
+                        "css/*.css",
+                        "css/*.map",
+                        "fonts/*"
+                    ],
+                    "shim": {
+                        "deps": [
+                            "bootstrap"
+                        ]
+                    }
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Twitter, Inc"
+                }
+            ],
+            "description": "Shim repository for the default theme for Bootstrap.",
+            "homepage": "http://getbootstrap.com",
+            "keywords": [
+                "bootstrap",
+                "css"
+            ],
+            "time": "2015-06-18 12:28:13"
+        },
+        {
+            "name": "components/jquery",
+            "version": "3.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/components/jquery.git",
+                "reference": "e5534d4ab8e80c159553d507e358ed20a806d3bf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/components/jquery/zipball/e5534d4ab8e80c159553d507e358ed20a806d3bf",
+                "reference": "e5534d4ab8e80c159553d507e358ed20a806d3bf",
                 "shasum": ""
             },
             "type": "component",
@@ -86,7 +139,10 @@
                     ],
                     "files": [
                         "jquery.min.js",
-                        "jquery.min.map"
+                        "jquery.min.map",
+                        "jquery.slim.js",
+                        "jquery.slim.min.js",
+                        "jquery.slim.min.map"
                     ]
                 }
             },
@@ -96,13 +152,12 @@
             ],
             "authors": [
                 {
-                    "name": "John Resig",
-                    "email": "jeresig@gmail.com"
+                    "name": "JS Foundation and other contributors"
                 }
             ],
             "description": "jQuery JavaScript Library",
             "homepage": "http://jquery.com",
-            "time": "2016-07-08 05:56:55"
+            "time": "2017-03-21 07:01:49"
         },
         {
             "name": "components/jqueryui",
@@ -191,22 +246,31 @@
         },
         {
             "name": "davro/fabrication",
-            "version": "dev-master",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/davro/fabrication.git",
-                "reference": "1a17df32a0b5dbba0c9e30bac35c92d4a8ca1205"
+                "reference": "2f5b65df2936fb74566f9fc7270ac56491b5c9b1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/davro/fabrication/zipball/1a17df32a0b5dbba0c9e30bac35c92d4a8ca1205",
-                "reference": "1a17df32a0b5dbba0c9e30bac35c92d4a8ca1205",
+                "url": "https://api.github.com/repos/davro/fabrication/zipball/2f5b65df2936fb74566f9fc7270ac56491b5c9b1",
+                "reference": "2f5b65df2936fb74566f9fc7270ac56491b5c9b1",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0"
             },
+            "require-dev": {
+                "phpunit/phpunit": "4.8.0",
+                "squizlabs/php_codesniffer": "3.*"
+            },
             "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Library": "library/"
+                }
+            },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "LGPL"
@@ -229,7 +293,7 @@
                 "fabrication",
                 "template"
             ],
-            "time": "2015-11-05 10:12:04"
+            "time": "2017-07-16 10:03:23"
         },
         {
             "name": "twbs/bootstrap",
@@ -286,9 +350,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "davro/fabrication": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

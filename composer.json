@@ -3,12 +3,13 @@
         "vendor-dir": "library/vendor"
     },
     "autoload": {
-        "classmap": ["library/vendor/"]
+        "classmap": ["library/"]
     },
     "require": {
         "components/bootstrap": "3.2.0",
+        "components/bootstrap-default": "3.3.5",
         "components/jqueryui": "1.11.2",
-	"davro/fabrication": "dev-master",
+	"davro/fabrication": "1.0.4",
         "twbs/bootstrap": "3.3.2"
     }
 }
