@@ -542,7 +542,6 @@ class Model
                 Fabrication::log(__METHOD__, 'Model :: INSERT : ' . var_export(mysql_error(), true));
                 Fabrication::log(__METHOD__, 'Model :: sql : '    . var_export($sql, true));
             }
-            
         } elseif (is_int(self::$objectId)) {
             $objectNamespace = get_class($object);
             $objectNamespaceTable = str_replace(
@@ -580,6 +579,7 @@ class Model
                 Fabrication::log(__METHOD__, 'Model :: INSERT : ' . var_export(mysql_error(), true));
                 Fabrication::log(__METHOD__, 'Model :: sql : '    . var_export($sql, true));
             }
+            
         } else {
             Fabrication::log(__METHOD__, 'Model :: save : failed ');
         }
@@ -676,7 +676,7 @@ class Model
     
     /**
      * Query directly using native SQL.
-     * 
+     *
      * @param string $sql
      * @return boolean
      */
@@ -685,8 +685,10 @@ class Model
         self::$sql = $sql;
 
         $link = Database::getResource();
+        
         mysql_select_db(PROJECT_DATABASE, $link);
         $result = mysql_query(self::$sql, $link);
+        
         if ($result) {
             $dataset = array();
             while ($row = mysql_fetch_assoc($result)) {
@@ -719,8 +721,8 @@ class Model
         self::$sql = 'TRUNCATE  `' . $table . '`';
         
         $link = Database::getResource();
-        mysql_select_db(PROJECT_DATABASE, $link);
         
+        mysql_select_db(PROJECT_DATABASE, $link);
         $result = mysql_query(self::$sql, $link);
         
         return $result;

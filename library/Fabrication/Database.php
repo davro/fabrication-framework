@@ -2,6 +2,8 @@
 
 namespace Fabrication;
 
+use Fabrication\Database\Mysql;
+
 /*
  * This file is part of the fabrication framework.
  * 
@@ -50,14 +52,13 @@ namespace Fabrication;
  * DataEntity -> Memcache           // Entity object should write out to Memory
  *
  *
- * @package         Library
+ * @package     Library
  * @subpackage  Database
  * @author      David Stevens <mail.davro@gmail.com>
  *
  */
 class Database
 {
-   
     public static $link;
     
     public static $username = 'root';
@@ -81,7 +82,7 @@ class Database
         self::$selectType = $type;
         
         //
-        // Eventually change for Database Adaptor classes, sqlite, mysql, postgre ... 
+        // Eventually change for Database Adaptor classes, sqlite, mysql, postgre.
         //
         switch (self::$selectType) {
             case 'sqlite':
@@ -97,42 +98,11 @@ class Database
             break;
         
             case 'mysql':
-                $configuration = Configuration::get('database');
-                $hostname = !empty($configuration['hostname']) ? 
-                    $configuration['hostname'] : self::$password;
                 
-                $username = !empty($configuration['username']) ? 
-                    $configuration['username'] : self::$password;
-                
-                $password = !empty($configuration['password']) ? 
-                    $configuration['password'] : self::$password;
-                
-                $database = !empty($configuration['database']) ? 
-                    $configuration['database'] : self::$database;
-                
-                if (!function_exists('\mysql_connect')) {
-                    die('Framework Database missing driver!');
-                    // @TODO trigger an installation database event.
-                } else {
-                    // suppress error deprected, TODO must replace with PDO as default!!
-                    self::$link = @\mysql_connect($hostname, $username, $password);
-                    
-                    if (! self::$link) {
-                        die('Framework Database missing connection!');
-                        // @TODO trigger an installation database connection event.
-                    }
-                }
-
-                if (PROJECT_DATABASE) {
-                    self::selectDB(PROJECT_DATABASE);
-                }
-                
-                if (!self::$link) {
-                    Fabrication::log(__METHOD__, 'Database MySQL Error ' . var_export(mysql_error(), true));
-                }
+                $adaptor    = new Mysql;
+                self::$link = $adaptor->getLink();
                 
                 return self::$link;
-                
             break;
         }
         

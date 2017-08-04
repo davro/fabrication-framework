@@ -20,7 +20,7 @@ final class Logger
     
     /**
      * Getter for retriving a Logger instance
-     * 
+     *
      * @return Logger
      */
     public static function instance()
@@ -34,7 +34,7 @@ final class Logger
 
     /**
      * Prevent cloning of the instance.
-     * 
+     *
      * @throws Exception
      */
     public function __clone()
@@ -44,7 +44,7 @@ final class Logger
     
     /**
      * Add a message to the log
-     * 
+     *
      * @param string $message
      */
     public function log($message = '')
