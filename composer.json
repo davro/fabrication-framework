@@ -1,0 +1,15 @@
+{
+    "config": {
+        "vendor-dir": "library/vendor"
+    },
+    "autoload": {
+        "classmap": ["library/"]
+    },
+    "require": {
+        "davro/fabrication": "1.0.4",
+        "risan/sentiment-analysis": "dev-master"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "8.5.0"
+    }
+}
